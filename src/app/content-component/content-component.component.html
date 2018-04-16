@@ -1,0 +1,65 @@
+<div class="contentDiv">
+  <div class="row tab">
+    <button class="tablinks col-lg-4 col-4 col-md-4" onclick="openCity(event, 'London')">Home</button>
+    <button class="tablinks col-lg-4 col-4 col-md-4" onclick="openCity(event, 'Paris')">Apps</button>
+    <button class="tablinks col-lg-4 col-4 col-md-4" onclick="openCity(event, 'Tokyo')">Settings</button>
+  </div>
+
+
+  <div style="margin:10px;margin-bottom:30px;">
+    <h2 style="text-align:center;font-family:sans-serif">Hi user ! Welcome</h2>
+  </div>
+
+  <div id="containerC">
+    <mdb-carousel [isControls]="true" [noWrap]="true" class="carousel slide carousel-fade" [animation]="'slide'">
+      <div class="buildClass" *ngFor="let build of builds">
+        <mdb-slide>
+          <div class="view " style="height:250px;width:1300px;background-color: rgba(124, 122, 122,0.5);">
+             <!-- <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">  -->                        
+               <h5 style="text-align:center;color:white;margin:20px;">New App1 Build Avaialble</h5>
+               <img class="imgClass" src="assets/AndroidLogo.ico" alt="MDA icon">             
+            <div class="mask waves-light" mdbRippleRadius>
+              
+            </div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive" style="color:black">{{build.buildEnv}}</h3>
+            <p style="color:black">{{build.version}}</p>
+          </div>
+        </mdb-slide>
+      </div>
+    </mdb-carousel>
+
+    <mdb-carousel [isControls]="true" [noWrap]="true" class="carousel slide carousel-fade" [animation]="'slide'">
+      <div class="buildClass" *ngFor="let build of builds">
+        <mdb-slide>
+          <div class="view " style="height:250px;width:1300px;background-color: rgba(124, 122, 122,0.5);">
+             <!-- <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">  -->                        
+               <h5 style="text-align:center;color:white;margin:20px;">New App2 Build Avaialble</h5>
+               <img class="imgClass" src="assets/AndroidLogo.ico" alt="MDA icon">             
+            <div class="mask waves-light" mdbRippleRadius>
+              
+            </div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive" style="color:black">{{build.buildEnv}}</h3>
+            <p style="color:black">{{build.version}}</p>
+          </div>
+        </mdb-slide>
+      </div>
+    </mdb-carousel>
+
+
+    <br>
+
+    <!-- <div class="btnCen row">
+      <button class="btnSp col-lg-12 col-md-12 col-12"><span>Download</span></button><br>
+    </div>
+    <div class="btnCen">
+      <button class="btnSp col-lg-12 col-md-12 col-12" style="background-color:cornflowerblue"><span>Show Other New Builds Avaialble</span></button>
+
+    </div> -->
+
+
+
+  </div>
